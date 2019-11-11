@@ -10,12 +10,6 @@ inputs:
   body:
     description: 'Text message to send.'
     required: true
-  sid:
-    description: 'ACCOUNT SID'
-    required: true
-  authtoken:
-    description: 'ACCOUNT AUTH TOKEN'
-    required: true
 outputs:
   status:
     description: The status of the message.

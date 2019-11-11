@@ -8,12 +8,12 @@ jobs:
     - name: Send an SMS using Twilio.
       id: sms
       uses: ankitjain28may/Twilio-Github-Action@master
+      env:
+        sid: ${{ secrets.SID }}
+        authtoken: ${{ secrets.AUTH_TOKEN }}
       with:
         from: ${{ secrets.FROM }}
         to: ${{ secrets.TO }}
         body: "Hello world"
-        sid: ${{ secrets.SID }}
-        authtoken: ${{ secrets.AUTH_TOKEN }}
     - name: Get the output status
       run: echo "The status of the message is ${{ steps.sms.outputs.status }}"
-      
