@@ -1,0 +1,21 @@
+name: 'Twilio Send SMS'
+description: 'Send an SMS using Twilio'
+inputs:
+  from:
+    description: 'This must be a Twilio phone number that you own, formatted with a "+" and country code.'
+    required: true
+  to:
+    description: 'This must be a destination phone number formatted with a "+" and country code.'
+    required: true
+  body:
+    description: 'Text message to send.'
+    required: true
+  sid:
+    description: 'ACCOUNT SID'
+    required: true
+  authtoken:
+    description: 'ACCOUNT AUTH TOKEN'
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'

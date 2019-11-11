@@ -1,0 +1,15 @@
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: Send an SMS using Twilio.
+      uses: ankitjain28may/Twilio-Github-Action@master
+      with:
+        from: ${{ secrets.FROM }}
+        to: ${{ secrets.TO }}
+        body: "Hello world"
+        sid: ${{ secrets.SID }}
+        authtoken: ${{ secrets.AUTH_TOKEN }}
