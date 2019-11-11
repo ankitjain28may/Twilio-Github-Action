@@ -16,6 +16,9 @@ inputs:
   authtoken:
     description: 'ACCOUNT AUTH TOKEN'
     required: true
+outputs:
+  status:
+    description: The status of the message.
 runs:
   using: 'docker'
   image: 'Dockerfile'

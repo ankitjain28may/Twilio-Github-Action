@@ -6,4 +6,6 @@ set -eu
     --data-urlencode "From=$INPUT_FROM" \
     --data-urlencode "Body=$INPUT_BODY" \
     --data-urlencode "To=$INPUT_TO" \
-    -u $INPUT_SID:$INPUT_AUTHTOKEN
+    -u $INPUT_SID:$INPUT_AUTHTOKEN > result.json
+
+echo ::set-output name=status::`cat result.json | /usr/bin/jq '.status'`
