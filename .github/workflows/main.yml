@@ -6,6 +6,7 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - name: Send an SMS using Twilio.
+      id: sms
       uses: ankitjain28may/Twilio-Github-Action@master
       with:
         from: ${{ secrets.FROM }}
@@ -13,3 +14,6 @@ jobs:
         body: "Hello world"
         sid: ${{ secrets.SID }}
         authtoken: ${{ secrets.AUTH_TOKEN }}
+    - name: Get the output status
+      run: echo "The status of the message is ${{ steps.sms.outputs.status }}"
+      
