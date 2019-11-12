@@ -1,5 +1,9 @@
 name: 'Twilio Send SMS'
 description: 'Send an SMS using Twilio'
+author: 'Ankit Jain'
+branding:
+  icon: 'message-circle'  
+  color: 'red'
 inputs:
   from:
     description: 'This must be a Twilio phone number that you own, formatted with a "+" and country code.'
