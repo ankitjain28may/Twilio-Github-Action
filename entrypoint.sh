@@ -9,3 +9,4 @@ set -eu
     -u $SID:$AUTH_TOKEN > result.json
 
 echo ::set-output name=status::`cat result.json | /usr/bin/jq '.status'`
+echo ::set-output name=error::`cat result.json | /usr/bin/jq '.error'`

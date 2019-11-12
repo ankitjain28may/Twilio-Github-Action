@@ -17,3 +17,5 @@ jobs:
         body: "Hello world"
     - name: Get the output status
       run: echo "The status of the message is ${{ steps.sms.outputs.status }}"
+    - name: Get the error message
+      run: echo "The status of the message is ${{ steps.sms.outputs.error }}"
